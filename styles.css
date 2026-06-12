@@ -1096,6 +1096,49 @@ footer {
 
 /* ─── RESPONSIVE ──────────────────────────────────────── */
 
+/* Projects page photo grids */
+.project-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 40px;
+}
+.project-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 40px;
+}
+.project-grid-3 > div,
+.project-grid-2 > div {
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.project-grid-3 img,
+.project-grid-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .project-grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .project-grid-3,
+  .project-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .project-grid-3 > div,
+  .project-grid-2 > div {
+    aspect-ratio: 3/2;
+  }
+}
+
 @media (max-width: 960px) {
   :root { --section-pad: 70px 24px; }
 
