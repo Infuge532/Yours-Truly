@@ -6,6 +6,118 @@
   <title>Projects — Yours Truly, Interior Design</title>
   <meta name="description" content="Browse Christina Ryan's interior design portfolio — kitchen remodels, farmhouse, rustic elegance, commercial spaces, and more in Kansas City." />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Carousel ──────────────────────────────────────────── */
+    .carousel-wrap {
+      position: relative;
+      margin-top: 32px;
+      overflow: hidden;
+      border-radius: 6px;
+      background: #1a1816;
+      user-select: none;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 580px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-slide img { height: 300px; }
+    }
+
+    .carousel-contain .carousel-slide img {
+      object-fit: contain;
+      background: #1a1814;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: rgba(20, 18, 16, 0.55);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: rgba(255,255,255,0.9);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 1.25rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s, color 0.2s, opacity 0.2s;
+      backdrop-filter: blur(4px);
+    }
+    .carousel-btn:hover { background: rgba(20,18,16,0.85); color: #fff; }
+    .carousel-btn:disabled { opacity: 0.2; cursor: default; }
+    .carousel-btn.carousel-prev { left: 14px; }
+    .carousel-btn.carousel-next { right: 14px; }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 7px;
+      z-index: 10;
+    }
+    .carousel-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.45);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .carousel-dot.active {
+      background: rgba(255,255,255,0.95);
+      transform: scale(1.25);
+    }
+
+    .carousel-counter {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      font-family: var(--font-body);
+      z-index: 10;
+      background: rgba(0,0,0,0.3);
+      padding: 3px 8px;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+    }
+
+    .carousel-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: var(--gold, #c9a96e);
+      transition: width 0.1s linear;
+      z-index: 10;
+    }
+  </style>
 </head>
 <body>
 
@@ -44,32 +156,31 @@
     </div>
   </div>
 
-  <!-- KITCHEN REMODEL 2026 -->
-  <div class="project-category">
-    <p class="section-label">Kitchen · 2026</p>
-    <h2>Kitchen <em>Remodel</em></h2>
-    <div class="divider"></div>
-    <p style="max-width: 580px; margin-top: 8px;">A complete kitchen transformation — new cabinetry, countertops, fixtures, and finishes selected to bring warmth and function together in perfect balance.</p>
-    <div class="project-grid-3">
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1777571607477-O6WK1I75LO3JMMD1KAJ6/IMG_4426.jpeg?format=2500w" alt="Kitchen Remodel" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1777571608010-5CQ6I1KPQJ61FC2BLU5N/IMG_4427.jpeg?format=2500w" alt="Kitchen Remodel" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1777571612292-K206088FG8XF8115X5HW/IMG_4425.jpeg?format=2500w" alt="Kitchen Remodel" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1777571614147-P5VK1OUE5WKHHWCQRXQK/IMG_4428.jpeg?format=2500w" alt="Kitchen Remodel" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1777571618489-6FKPOFP7QPNJ43X1ZCVJ/IMG_4432.jpeg?format=2500w" alt="Kitchen Remodel" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1777571620011-KJDDWMXB1SD9ATA9AF3M/IMG_4430.jpeg?format=2500w" alt="Kitchen Remodel" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-    </div>
-  </div>
-
   <!-- TRANSITIONAL KITCHEN -->
   <div class="project-category" style="background: var(--cream);">
     <div style="max-width: var(--max-width); margin: 0 auto; padding: var(--section-pad);">
-      <p class="section-label">Kitchen · 2023</p>
-      <h2>Transitional <em>Kitchen</em></h2>
+      <p class="section-label">Main Floor · 2023</p>
+      <h2>Main <em>Floor</em></h2>
       <div class="divider"></div>
-      <p style="max-width: 580px; margin-top: 8px;">A transitional-style kitchen update blending classic lines with contemporary finishes — proof that timeless and modern can coexist beautifully.</p>
-      <div class="project-grid-2">
-        <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/84a70128-0a13-4804-909f-6f300100f612/IMG_7873.jpeg?format=2500w" alt="Transitional Kitchen" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/f9c21cd7-b227-4960-8760-25b9a6d37bee/IMG_7880.jpeg?format=2500w" alt="Transitional Kitchen" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
+      <p style="max-width: 580px; margin-top: 8px;">A main floor update blending classic lines with contemporary finishes — proof that timeless and modern can coexist beautifully.</p>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/84a70128-0a13-4804-909f-6f300100f612/IMG_7873.jpeg?format=2500w" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/f9c21cd7-b227-4960-8760-25b9a6d37bee/IMG_7880.jpeg?format=2500w" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p2192140880-6.jpg" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p2192141344-6.jpg" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p2192142651-6.jpg" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p2192142447-6.jpg" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p2192143355-6.jpg" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p2192141170-6.jpg" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p2192142424-6.jpg" alt="Transitional Kitchen" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p2192143435-6.jpg" alt="Transitional Kitchen" loading="lazy" /></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots"></div>
+        <div class="carousel-counter"></div>
+        <div class="carousel-progress"></div>
       </div>
     </div>
   </div>
@@ -80,12 +191,19 @@
     <h2>Kitchen <em>Remodel</em></h2>
     <div class="divider"></div>
     <p style="max-width: 580px; margin-top: 8px;">A full kitchen remodel with striking new cabinetry, countertops, and hardware — every detail selected to elevate the everyday.</p>
-    <div class="project-grid-3">
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489501688-Y9LX6JERVB89ZQ9TIZ01/2468B5FF-850C-4BC3-9FDB-9749D1466D53.jpeg?format=2500w" alt="Kitchen Remodel 2023" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489708865-76C0KHTXRFJ31B10O7O0/20B47DBA-1BD3-4BD0-9AFF-FE4F7CF10930.jpeg?format=2500w" alt="Kitchen Remodel 2023" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489790644-IS14Y9B2CS1788DM70PG/CADD8049-FCDA-4A3F-ACBD-A1932A3484A1.jpeg?format=2500w" alt="Kitchen Remodel 2023" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489856032-1HHDMWVG07BBW3SOEBVK/4FE3F6D7-1420-4BDF-AB8E-B31373D71C42.jpeg?format=2500w" alt="Kitchen Remodel 2023" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489892168-Z97UUPQUT2G4VS33T4E1/80F6C45F-E6D5-4D27-A486-FF6B85BFF6DF.jpeg?format=2500w" alt="Kitchen Remodel 2023" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
+    <div class="carousel-wrap" data-carousel>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489501688-Y9LX6JERVB89ZQ9TIZ01/2468B5FF-850C-4BC3-9FDB-9749D1466D53.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489708865-76C0KHTXRFJ31B10O7O0/20B47DBA-1BD3-4BD0-9AFF-FE4F7CF10930.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489790644-IS14Y9B2CS1788DM70PG/CADD8049-FCDA-4A3F-ACBD-A1932A3484A1.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489856032-1HHDMWVG07BBW3SOEBVK/4FE3F6D7-1420-4BDF-AB8E-B31373D71C42.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489892168-Z97UUPQUT2G4VS33T4E1/80F6C45F-E6D5-4D27-A486-FF6B85BFF6DF.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+      <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+      <div class="carousel-dots"></div>
+      <div class="carousel-counter"></div>
+      <div class="carousel-progress"></div>
     </div>
   </div>
 
@@ -95,17 +213,51 @@
     <h2>Rustic <em>Elegance</em></h2>
     <div class="divider"></div>
     <p style="max-width: 580px; margin-top: 8px;">A main level transformation with earthy elements — exposed wood, layered textures, and a palette that's cozy without sacrificing sophistication.</p>
-    <div class="project-grid-3">
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653223148-XOSE5EFYVFU7YMMBC68X/76650747_2699862523442865_7784291580168372224_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653223530-QJ4FR9LX53AXXUBRWB2J/76932863_2699862553442862_7917669770911023104_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653224249-AIMU67XTC1O9X4L0WO57/78040785_2699862756776175_4248796032495779840_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653224615-ZZ2QZ010ZB4S4VHSBC1V/73504926_2699862280109556_7796526936972328960_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653225315-RAOUZK90ML1XB0QLYUO7/74589772_2699862773442840_7313680683421925376_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653225674-JW5O2YXOOPHZWMG0TEZM/74599525_2699862416776209_7421740591710470144_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653226358-85ARFFO3UMGZAO4IRLVW/74664483_2699862180109566_6070140458405724160_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653226713-G77GJWTYUYH1NY68RFFZ/74680820_2699862350109549_3144856155998650368_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653227431-HIK2XLGGDKN5GFJJDIS6/75006532_2699862260109558_4329551373394771968_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-      <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653227886-ME5O5F2Q186JQ05444BG/75247337_2699862190109565_4848519616164528128_n.jpg?format=2500w" alt="Rustic Elegance" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
+    <div class="carousel-wrap carousel-contain" data-carousel>
+      <div class="carousel-track">
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653223148-XOSE5EFYVFU7YMMBC68X/76650747_2699862523442865_7784291580168372224_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653223530-QJ4FR9LX53AXXUBRWB2J/76932863_2699862553442862_7917669770911023104_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653224249-AIMU67XTC1O9X4L0WO57/78040785_2699862756776175_4248796032495779840_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653224615-ZZ2QZ010ZB4S4VHSBC1V/73504926_2699862280109556_7796526936972328960_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653225315-RAOUZK90ML1XB0QLYUO7/74589772_2699862773442840_7313680683421925376_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653225674-JW5O2YXOOPHZWMG0TEZM/74599525_2699862416776209_7421740591710470144_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653226358-85ARFFO3UMGZAO4IRLVW/74664483_2699862180109566_6070140458405724160_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653226713-G77GJWTYUYH1NY68RFFZ/74680820_2699862350109549_3144856155998650368_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653227431-HIK2XLGGDKN5GFJJDIS6/75006532_2699862260109558_4329551373394771968_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653227886-ME5O5F2Q186JQ05444BG/75247337_2699862190109565_4848519616164528128_n.jpg?format=2500w" alt="Rustic Elegance" loading="lazy" /></div>
+      </div>
+      <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+      <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+      <div class="carousel-dots"></div>
+      <div class="carousel-counter"></div>
+      <div class="carousel-progress"></div>
+    </div>
+  </div>
+
+  <!-- 16529 BLUEJACKET -->
+  <div class="project-category" style="background: var(--ivory);">
+    <div style="max-width: var(--max-width); margin: 0 auto; padding: var(--section-pad);">
+      <p class="section-label">Residential · Lower Level · 2025</p>
+      <h2>16529 <em>Bluejacket</em></h2>
+      <div class="divider"></div>
+      <p style="max-width: 580px; margin-top: 8px;">A show-stopping lower level featuring a glass-enclosed bourbon bar, custom walnut wine cellar, and a luminous marble bar island — designed for the collector and entertainer alike.</p>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004136-6.jpg" alt="16529 Bluejacket — Bourbon Bar & Wine Cellar Overview" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004220-6.jpg" alt="16529 Bluejacket — Bourbon Bar Entry" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004347-6.jpg" alt="16529 Bluejacket — Bourbon Bar Interior" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004442-6.jpg" alt="16529 Bluejacket — Bar Shelving Detail" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004250-6.jpg" alt="16529 Bluejacket — Wine Cellar Interior" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004302-6.jpg" alt="16529 Bluejacket — Wine Cellar from Staircase" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004455-6.jpg" alt="16529 Bluejacket — Marble Bar Island" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004096-6.jpg" alt="16529 Bluejacket — Marble Bar Wide View" loading="lazy" /></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots"></div>
+        <div class="carousel-counter"></div>
+        <div class="carousel-progress"></div>
+      </div>
     </div>
   </div>
 
@@ -116,10 +268,23 @@
       <h2 style="color: var(--ivory);">Commercial <em>Projects</em></h2>
       <div class="divider"></div>
       <p style="color: rgba(253,250,246,0.65); max-width: 580px; margin-top: 8px;">From clubhouses to commercial interiors, Christina brings the same attention to detail and personal touch that defines her residential work — scaled for business environments.</p>
-      <div class="project-grid-3">
-        <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/2263a76f-a128-403d-b856-2bec34328377/IMG_1175.jpeg?format=2500w" alt="Commercial — Mills Farm Clubhouse" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/568b4f22-0fea-4eb7-86a9-8d99c2f4acce/IMG_1135.jpeg?format=2500w" alt="Residential Project" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1630653228497-4QZ41XUI96TI6BCDRANF/75348907_2699862683442849_220469308482912256_n.jpg?format=2500w" alt="Project" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p637157009-6.jpg" alt="Mills Farm Clubhouse — Grand Room" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p629371705-6.jpg" alt="Mills Farm Clubhouse — Green Velvet Seating" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p756151099-6.jpg" alt="Mills Farm Clubhouse — Leather Sofa Wing" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p996172838-6.jpg" alt="Mills Farm Clubhouse — Vaulted Ceiling Overview" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1048610579-6.jpg" alt="Mills Farm Clubhouse — Lounge Overview" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p902104299-6.jpg" alt="Mills Farm Clubhouse — Entry Seating Area" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1012282175-6.jpg" alt="Mills Farm Clubhouse — Secondary Lounge" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p568869617-6.jpg" alt="Mills Farm Clubhouse — Kitchen from Lounge" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p634765624-6.jpg" alt="Mills Farm Clubhouse — Kitchen" loading="lazy" /></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots"></div>
+        <div class="carousel-counter"></div>
+        <div class="carousel-progress"></div>
       </div>
       <p style="color: rgba(253,250,246,0.45); font-size: 0.78rem; margin-top: 16px; font-style: italic;">Featured: Mills Farm Clubhouse, Overland Park, KS</p>
     </div>
@@ -132,15 +297,21 @@
       <h2>9309 W. 149th — <em>Ryan Staging</em></h2>
       <div class="divider"></div>
       <p style="max-width: 580px; margin-top: 8px;">A full home staging that transforms every room into a compelling, buyer-ready space — warm, cohesive, and designed to make the property unforgettable at first showing.</p>
-      <div class="project-grid-3" style="margin-top: 32px;">
-        <div><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260261-2.jpg" alt="9309 W. 149th — Ryan Staging" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260280-2.jpg" alt="9309 W. 149th — Ryan Staging" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260268-2.jpg" alt="9309 W. 149th — Ryan Staging" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260250-2.jpg" alt="9309 W. 149th — Ryan Staging" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127757015-2.jpg" alt="9309 W. 149th — Ryan Staging" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260281-2.jpg" alt="9309 W. 149th — Ryan Staging" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260284-2.jpg" alt="9309 W. 149th — Ryan Staging" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
-        <div><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260264-2.jpg" alt="9309 W. 149th — Ryan Staging" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'" loading="lazy" /></div>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260261-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260280-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260250-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127757015-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260281-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260284-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260264-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots"></div>
+        <div class="carousel-counter"></div>
+        <div class="carousel-progress"></div>
       </div>
     </div>
   </div>
@@ -186,92 +357,6 @@
     </div>
   </footer>
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button id="lb-close" aria-label="Close">&times;</button>
-    <button id="lb-prev" aria-label="Previous">&#8592;</button>
-    <button id="lb-next" aria-label="Next">&#8594;</button>
-    <div id="lb-img-wrap">
-      <img id="lb-img" src="" alt="" />
-    </div>
-    <div id="lb-counter"></div>
-  </div>
-
-  <style>
-    #lightbox {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: rgba(20,18,16,0.96);
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    #lightbox.open { display: flex; }
-
-    #lb-img-wrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100%;
-      padding: 64px 100px;
-    }
-    #lb-img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      display: block;
-      box-shadow: 0 8px 60px rgba(0,0,0,0.7);
-      user-select: none;
-    }
-
-    #lb-close {
-      position: fixed;
-      top: 20px; right: 28px;
-      background: none; border: none;
-      color: rgba(255,255,255,0.8);
-      font-size: 2.4rem;
-      cursor: pointer;
-      line-height: 1;
-      z-index: 10000;
-      transition: color 0.2s;
-    }
-    #lb-close:hover { color: #fff; }
-
-    #lb-prev, #lb-next {
-      position: fixed;
-      top: 50%; transform: translateY(-50%);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: rgba(255,255,255,0.85);
-      font-size: 1.6rem;
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      cursor: pointer;
-      z-index: 10000;
-      display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s, color 0.2s;
-    }
-    #lb-prev { left: 20px; }
-    #lb-next { right: 20px; }
-    #lb-prev:hover, #lb-next:hover { background: rgba(255,255,255,0.18); color: #fff; }
-    #lb-prev:disabled, #lb-next:disabled { opacity: 0.25; cursor: default; }
-
-    #lb-counter {
-      position: fixed;
-      bottom: 20px;
-      left: 50%; transform: translateX(-50%);
-      color: rgba(255,255,255,0.5);
-      font-family: var(--font-body);
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-    }
-
-    .lb-trigger { cursor: zoom-in; }
-  </style>
-
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const nav = document.getElementById('nav');
@@ -280,59 +365,104 @@
       document.getElementById('mobileMenu').classList.toggle('open');
     });
 
-    // ── Lightbox ──────────────────────────────────────────
-    const lb        = document.getElementById('lightbox');
-    const lbImg     = document.getElementById('lb-img');
-    const lbCounter = document.getElementById('lb-counter');
-    const lbPrev    = document.getElementById('lb-prev');
-    const lbNext    = document.getElementById('lb-next');
+    // ── Carousel ─────────────────────────────────────────────
+    const INTERVAL = 7000;
 
-    let currentGroup = [];
-    let currentIndex = 0;
+    document.querySelectorAll('[data-carousel]').forEach(wrap => {
+      const track    = wrap.querySelector('.carousel-track');
+      const slides   = Array.from(wrap.querySelectorAll('.carousel-slide'));
+      const prevBtn  = wrap.querySelector('.carousel-prev');
+      const nextBtn  = wrap.querySelector('.carousel-next');
+      const dotsWrap = wrap.querySelector('.carousel-dots');
+      const counter  = wrap.querySelector('.carousel-counter');
+      const progress = wrap.querySelector('.carousel-progress');
+      const total    = slides.length;
+      let current    = 0;
+      let timer      = null;
+      let progTimer  = null;
+      let progStart  = null;
 
-    function showLightbox(group, index) {
-      currentGroup = group;
-      currentIndex = index;
-      updateLightbox();
-      lb.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function updateLightbox() {
-      const item = currentGroup[currentIndex];
-      lbImg.src  = item.src;
-      lbImg.alt  = item.alt;
-      lbCounter.textContent = `${currentIndex + 1} / ${currentGroup.length}`;
-      lbPrev.disabled = currentIndex === 0;
-      lbNext.disabled = currentIndex === currentGroup.length - 1;
-    }
-
-    function closeLightbox() {
-      lb.classList.remove('open');
-      document.body.style.overflow = '';
-      lbImg.src = '';
-    }
-
-    document.getElementById('lb-close').addEventListener('click', closeLightbox);
-    lb.addEventListener('click', e => { if (e.target === lb || e.target === document.getElementById('lb-img-wrap')) closeLightbox(); });
-    lbPrev.addEventListener('click', () => { if (currentIndex > 0) { currentIndex--; updateLightbox(); } });
-    lbNext.addEventListener('click', () => { if (currentIndex < currentGroup.length - 1) { currentIndex++; updateLightbox(); } });
-
-    document.addEventListener('keydown', e => {
-      if (!lb.classList.contains('open')) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft'  && !lbPrev.disabled) { currentIndex--; updateLightbox(); }
-      if (e.key === 'ArrowRight' && !lbNext.disabled) { currentIndex++; updateLightbox(); }
-    });
-
-    // Wire up all project sections
-    document.querySelectorAll('.project-category').forEach(section => {
-      const imgs = Array.from(section.querySelectorAll('img'));
-      const group = imgs.map(img => ({ src: img.src, alt: img.alt }));
-      imgs.forEach((img, i) => {
-        img.classList.add('lb-trigger');
-        img.addEventListener('click', () => showLightbox(group, i));
+      // Build dots
+      slides.forEach((_, i) => {
+        const d = document.createElement('button');
+        d.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+        d.setAttribute('aria-label', `Slide ${i + 1}`);
+        d.addEventListener('click', () => goTo(i, true));
+        dotsWrap.appendChild(d);
       });
+
+      function updateUI() {
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dotsWrap.querySelectorAll('.carousel-dot').forEach((d, i) =>
+          d.classList.toggle('active', i === current));
+        counter.textContent = `${current + 1} / ${total}`;
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current === total - 1;
+      }
+
+      function startProgress() {
+        stopProgress();
+        progress.style.transition = 'none';
+        progress.style.width = '0%';
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            progress.style.transition = `width ${INTERVAL}ms linear`;
+            progress.style.width = '100%';
+          });
+        });
+      }
+
+      function stopProgress() {
+        progress.style.transition = 'none';
+        progress.style.width = '0%';
+      }
+
+      function goTo(index, userAction = false) {
+        current = (index + total) % total;
+        updateUI();
+        if (userAction) {
+          restartTimer();
+        }
+      }
+
+      function startTimer() {
+        timer = setInterval(() => {
+          current = (current + 1) % total;
+          updateUI();
+          startProgress();
+        }, INTERVAL);
+        startProgress();
+      }
+
+      function stopTimer() {
+        clearInterval(timer);
+        timer = null;
+        stopProgress();
+      }
+
+      function restartTimer() {
+        stopTimer();
+        startTimer();
+      }
+
+      prevBtn.addEventListener('click', () => goTo(current - 1, true));
+      nextBtn.addEventListener('click', () => goTo(current + 1, true));
+
+      // Touch / swipe support
+      let touchStartX = 0;
+      wrap.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      wrap.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1, true);
+      }, { passive: true });
+
+      // Pause on hover
+      wrap.addEventListener('mouseenter', stopTimer);
+      wrap.addEventListener('mouseleave', startTimer);
+
+      // Init
+      updateUI();
+      startTimer();
     });
   </script>
 </body>
