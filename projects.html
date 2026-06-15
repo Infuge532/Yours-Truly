@@ -15,12 +15,17 @@
       border-radius: 6px;
       background: #1a1816;
       user-select: none;
+      touch-action: pan-y;
     }
 
     .carousel-track {
       display: flex;
-      transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       will-change: transform;
+    }
+
+    .carousel-track.dragging {
+      transition: none;
     }
 
     .carousel-slide {
@@ -156,6 +161,38 @@
     </div>
   </div>
 
+  <!-- 16529 BLUEJACKET -->
+  <div class="project-category" style="background: var(--ivory);">
+    <div style="max-width: var(--max-width); margin: 0 auto; padding: var(--section-pad);">
+      <p class="section-label">Residential · Lower Level · 2025</p>
+      <h2>16529 <em>Bluejacket</em></h2>
+      <div class="divider"></div>
+      <p style="max-width: 580px; margin-top: 8px;">A show-stopping lower level featuring a glass-enclosed bourbon bar, custom walnut wine cellar, and a luminous marble bar island — designed for the collector and entertainer alike.</p>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004220-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004358-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004372-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004442-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004430-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004474-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004136-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004188-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004250-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004277-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004455-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004076-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004096-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots"></div>
+        <div class="carousel-counter"></div>
+        <div class="carousel-progress"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- TRANSITIONAL KITCHEN -->
   <div class="project-category" style="background: var(--cream);">
     <div style="max-width: var(--max-width); margin: 0 auto; padding: var(--section-pad);">
@@ -185,19 +222,29 @@
     </div>
   </div>
 
-  <!-- KITCHEN REMODEL 2023 -->
+  <!-- CHRISTINA RYAN — CORPORATE 2021 -->
   <div class="project-category">
-    <p class="section-label">Kitchen · 2023</p>
-    <h2>Kitchen <em>Remodel</em></h2>
+    <p class="section-label">Outdoor Design · 2021</p>
+    <h2>Outdoor <em>Living</em></h2>
     <div class="divider"></div>
-    <p style="max-width: 580px; margin-top: 8px;">A full kitchen remodel with striking new cabinetry, countertops, and hardware — every detail selected to elevate the everyday.</p>
+    <p style="max-width: 580px; margin-top: 8px;">Bringing the same intention and elegance indoors to the outdoors — curated exterior spaces designed for entertaining, relaxing, and making every season feel intentional.</p>
     <div class="carousel-wrap" data-carousel>
       <div class="carousel-track">
-        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489501688-Y9LX6JERVB89ZQ9TIZ01/2468B5FF-850C-4BC3-9FDB-9749D1466D53.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
-        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489708865-76C0KHTXRFJ31B10O7O0/20B47DBA-1BD3-4BD0-9AFF-FE4F7CF10930.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
-        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489790644-IS14Y9B2CS1788DM70PG/CADD8049-FCDA-4A3F-ACBD-A1932A3484A1.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
-        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489856032-1HHDMWVG07BBW3SOEBVK/4FE3F6D7-1420-4BDF-AB8E-B31373D71C42.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
-        <div class="carousel-slide"><img src="https://images.squarespace-cdn.com/content/v1/5b879209da02bc54b4c3dd03/1678489892168-Z97UUPQUT2G4VS33T4E1/80F6C45F-E6D5-4D27-A486-FF6B85BFF6DF.jpeg?format=2500w" alt="Kitchen Remodel 2023" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499977125-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499973756-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499973763-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499977131-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499977126-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499977128-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499972704-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499977130-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499973767-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499973759-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499973760-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499973758-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499972709-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499977129-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
+        <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1499972710-6.jpg" alt="Christina Ryan Project" loading="lazy" /></div>
       </div>
       <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
       <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
@@ -243,14 +290,19 @@
       <p style="max-width: 580px; margin-top: 8px;">A show-stopping lower level featuring a glass-enclosed bourbon bar, custom walnut wine cellar, and a luminous marble bar island — designed for the collector and entertainer alike.</p>
       <div class="carousel-wrap" data-carousel>
         <div class="carousel-track">
-          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004136-6.jpg" alt="16529 Bluejacket — Bourbon Bar & Wine Cellar Overview" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004220-6.jpg" alt="16529 Bluejacket — Bourbon Bar Entry" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004347-6.jpg" alt="16529 Bluejacket — Bourbon Bar Interior" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004442-6.jpg" alt="16529 Bluejacket — Bar Shelving Detail" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004250-6.jpg" alt="16529 Bluejacket — Wine Cellar Interior" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004302-6.jpg" alt="16529 Bluejacket — Wine Cellar from Staircase" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004455-6.jpg" alt="16529 Bluejacket — Marble Bar Island" loading="lazy" /></div>
-          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004096-6.jpg" alt="16529 Bluejacket — Marble Bar Wide View" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004220-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004358-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004372-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004442-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004430-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004474-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004136-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004188-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004250-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004277-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004455-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004076-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1123004096-6.jpg" alt="16529 Bluejacket" loading="lazy" /></div>
         </div>
         <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
         <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
@@ -306,6 +358,66 @@
           <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260281-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
           <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260284-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
           <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1127260264-6.jpg" alt="9309 W. 149th — Ryan Staging" loading="lazy" /></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots"></div>
+        <div class="carousel-counter"></div>
+        <div class="carousel-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12710 S. PFLUMM -->
+  <div class="project-category" style="background: var(--ivory);">
+    <div style="max-width: var(--max-width); margin: 0 auto; padding: var(--section-pad);">
+      <p class="section-label">Office Design · 2021</p>
+      <h2>Office <em>Redesign</em></h2>
+      <div class="divider"></div>
+      <p style="max-width: 580px; margin-top: 8px;">A professional office transformation that balances productivity and polish — curated furnishings and finishes that make a workspace feel intentional and inspiring.</p>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488591-6.jpg" alt="12710 S. Pflumm" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488649-6.jpg" alt="12710 S. Pflumm" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488593-6.jpg" alt="12710 S. Pflumm" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488651-6.jpg" alt="12710 S. Pflumm" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488650-6.jpg" alt="12710 S. Pflumm" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488587-6.jpg" alt="12710 S. Pflumm" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486339-6.jpg" alt="12710 S. Pflumm" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486340-6.jpg" alt="12710 S. Pflumm" loading="lazy" /></div>
+        </div>
+        <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
+        <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
+        <div class="carousel-dots"></div>
+        <div class="carousel-counter"></div>
+        <div class="carousel-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- p657364044 GALLERY -->
+  <div class="project-category" style="background: var(--cream);">
+    <div style="max-width: var(--max-width); margin: 0 auto; padding: var(--section-pad);">
+      <p class="section-label">Residential · 2023</p>
+      <h2>Full Home <em>Transformation</em></h2>
+      <div class="divider"></div>
+      <p style="max-width: 580px; margin-top: 8px;">A beautifully curated residential space — thoughtful selections and refined finishes that make every room feel at home.</p>
+      <div class="carousel-wrap" data-carousel>
+        <div class="carousel-track">
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501489071-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488943-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501489065-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501489074-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486859-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486855-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486849-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501489073-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486833-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486856-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486832-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501486835-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488936-6.jpg" alt="Residential Design" loading="lazy" /></div>
+          <div class="carousel-slide"><img src="https://christinecaso.zenfolio.com/img/s/v-10/p1501488934-6.jpg" alt="Residential Design" loading="lazy" /></div>
         </div>
         <button class="carousel-btn carousel-prev" aria-label="Previous">&#8592;</button>
         <button class="carousel-btn carousel-next" aria-label="Next">&#8594;</button>
@@ -448,17 +560,39 @@
       prevBtn.addEventListener('click', () => goTo(current - 1, true));
       nextBtn.addEventListener('click', () => goTo(current + 1, true));
 
-      // Touch / swipe support
+      // Touch / swipe support — live drag + snap
       let touchStartX = 0;
-      wrap.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      let dragging = false;
+
+      wrap.addEventListener('touchstart', e => {
+        touchStartX = e.touches[0].clientX;
+        dragging = true;
+        track.classList.add('dragging');
+        stopTimer();
+      }, { passive: true });
+
+      wrap.addEventListener('touchmove', e => {
+        if (!dragging) return;
+        const dx = e.touches[0].clientX - touchStartX;
+        track.style.transform = `translateX(calc(-${current * 100}% + ${dx}px))`;
+      }, { passive: true });
+
       wrap.addEventListener('touchend', e => {
+        if (!dragging) return;
+        dragging = false;
+        track.classList.remove('dragging');
         const dx = e.changedTouches[0].clientX - touchStartX;
-        if (Math.abs(dx) > 40) goTo(dx < 0 ? current + 1 : current - 1, true);
+        if (Math.abs(dx) > 50) {
+          goTo(dx < 0 ? current + 1 : current - 1, true);
+        } else {
+          updateUI(); // snap back
+          restartTimer();
+        }
       }, { passive: true });
 
       // Pause on hover
       wrap.addEventListener('mouseenter', stopTimer);
-      wrap.addEventListener('mouseleave', startTimer);
+      wrap.addEventListener('mouseleave', restartTimer);
 
       // Init
       updateUI();
