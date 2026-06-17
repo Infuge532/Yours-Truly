@@ -1177,4 +1177,6 @@ footer {
   .intro-strip { gap: 32px; }
 
   .masonry-2col, .masonry-3col { grid-template-columns: 1fr; }
+
+  .about-two-col { grid-template-columns: 1fr !important; gap: 48px !important; }
 }
